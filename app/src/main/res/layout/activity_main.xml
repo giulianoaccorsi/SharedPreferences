@@ -31,7 +31,6 @@
             android:inputType="textPersonName"
             android:labelFor="@id/titleLabel"
             android:minHeight="48dp"
-            android:text="@string/name"
             android:textAlignment="center"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
