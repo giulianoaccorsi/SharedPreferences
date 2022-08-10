@@ -13,7 +13,7 @@ class Saudacao : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_saudacao)
+        setContentView(binding.root)
 
         val saudacaoPersistencia = this.getSharedPreferences("saudacao", Context.MODE_PRIVATE)
 
