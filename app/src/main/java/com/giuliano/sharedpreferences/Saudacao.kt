@@ -24,11 +24,13 @@ class Saudacao : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        // Criamos uma instancia do DataBaseManager.
         val db = DataBaseManager(this, "saudacoes")
         val cursor = db.listaSaudacao()
         var nome = ""
         var tratamento = ""
 
+        // Aqui verificamos o count do Cursor. Se for maior do que 0. ou seja, caso exista um. Pegamos o Nome e o Tratamento.
         if(cursor.count > 0) {
             cursor.moveToFirst()
             nome = cursor.getString(cursor.getColumnIndex("NOME"))
