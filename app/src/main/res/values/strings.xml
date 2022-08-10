@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">SharedPreferences</string>
+    <string name="name">Name</string>
+    <string name="saudation_label">Salvar Nova Saudação</string>
+    <string name="buttonSaudation">Exibir Saudação</string>
+    <string name="tratamento_label">Tratamento</string>
+    <string name="titleLabel">Nome</string>
+
+    <string-array name="saudacoes">
+        <item>Sr</item>
+        <item>Sra</item>
+        <item>Dr</item>
+        <item>Dra</item>
+        <item>Sem tratamento</item>
+    </string-array>
 </resources>
