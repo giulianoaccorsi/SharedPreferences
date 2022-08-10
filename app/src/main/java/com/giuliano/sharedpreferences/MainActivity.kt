@@ -8,6 +8,8 @@ import android.widget.Toast
 import com.giuliano.sharedpreferences.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    // Cria o ViewBinding para poder chamar a view sem utilizar o findingByID
     private val binding: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
@@ -16,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        // Caso o usuaário clique no botão salvar. Salva o nome e o tratamento que o usuário adiciona
+        // e mostrar na tela com um Toast que foi salvo com sucesso
 
         binding.buttonSave.setOnClickListener {
             val saudacaoPersistencia = this.getSharedPreferences("saudacao", Context.MODE_PRIVATE)
@@ -29,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        // Caso o usuário clique no botaão exibir. Passa para a próxima tela.
         binding.exibirButton.setOnClickListener {
             val indent = Intent(this, Saudacao::class.java)
             startActivity(indent)
